@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    div.date
+    {
+        position:fixed;
+        right:0px;
+        padding-right: 5px;
+    }
+    form.rss
+    {
+        position: fixed;
+        top:300px;
+        left:400px;
+    }
+    </style>
+    <body>
+      <div class="date">{{today}}</div>
+      <form class=rss method="POST" action="">{%csrf_token%}
+          {{ form }}<input type="submit" value="Submit">
+      </form>
+    </body>
+</head>
+</html>
